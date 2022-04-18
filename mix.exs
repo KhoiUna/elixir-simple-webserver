@@ -14,7 +14,7 @@ defmodule ElixirPlug.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :poison],
+      extra_applications: [:logger, :json, :plug_cowboy],
       mod: {ElixirPlug.Application, []}
     ]
   end
@@ -22,7 +22,7 @@ defmodule ElixirPlug.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:poison, "~> 5.0"},
+      {:json, "~> 1.4"},
       {:plug_cowboy, "~> 2.5"}
     ]
   end
